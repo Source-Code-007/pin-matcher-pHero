@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input class="form-control" type="text" id="generate-pin-inp">
+                    <button class="generate-btn" id="generate-pin-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input class="form-control" id="apply-pin-inp" type="text">
+                    <div class="numbers">
+                        <div class="calc-body user-select-none">
+                            <div class="calc-button-row">
+                              <div class="button pin-btn">7</div>
+                              <div class="button pin-btn">8</div>
+                              <div class="button pin-btn">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button pin-btn">4</div>
+                              <div class="button pin-btn">5</div>
+                              <div class="button pin-btn">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button pin-btn">1</div>
+                              <div class="button pin-btn">2</div>
+                              <div class="button pin-btn">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button pin-btn">&lt;</div>
+                                <div class="button pin-btn">0</div>
+                                <div class="button pin-btn" id="c">C</div>
+                            </div>
+                            <div>
+                                <button type="submit" class="submit-btn" id='submit-btn'>Submit</button>
+                                <p class="action-left" id="try-alert"></p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notify-section">
+            <p class="notify" id="not-match-alert">❌ Pin Didn't Match, Please try again</p>
+            <p class="notify" id="match-alert">✅ Pin Matched... Secret door is opening for you</p>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
